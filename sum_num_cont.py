@@ -32,17 +32,18 @@ def main():
                         # converts entered number from string to integer
                         user_num_b_int = int(user_num_b_string)
                         # joins the strings
-                        answer += user_num_b_string + " + "
 
                         if user_num_b_int >= 0:
                             print("{} added to the sum."
                                   .format(user_num_b_int))
+                            print("")
                             sum = sum + user_num_b_int
                             loop_counter = loop_counter + 1
-                        if user_num_b_int < 0:
-                            print("Please enter a whole number!")
+                            answer += str(user_num_b_int) + " + "
+                        else:
+                            print("{} is < 0 and cannot be added" .format(user_num_b_int))
+                            print("")
                             continue
-                        print("")
                     except Exception:
                         print("{} is not a number.". format(user_num_b_string))
                         print("")
